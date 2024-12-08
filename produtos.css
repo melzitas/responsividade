@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+body{
+font-family: Montserrat;
+margin: 0;
+padding: 0;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #484848;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(211, 211, 211, 0.2);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #d4d4d4; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+nav li a:before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background-color: #545593;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s ease;
+}
+
+nav li a{
+    position: relative;
+    color: #000000;
+    padding: 6px 0;
+}
+
+nav li a:hover:before{
+    width: 100%;
+}
+
+
+.logo img{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: -55px;
+    width: 169px;
+}
+
+.logo1 img{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1300px;
+    width: 25px;
+}
+
+.logo2 img{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1250px;
+    width: 25px;
+}
+
+@media (min-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.grid-gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+ 
+   
+}
+
+.grid-gallery-item {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    transition: all .3s;
+}
+
+.grid-gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-gallery-container:hover .grid-gallery-item{
+    opacity: .5;
+}
+.grid-gallery-container .grid-gallery-item:hover {
+    opacity: 1
+}
+.grid-gallery-item:hover{
+    transform: translateY(-20px)
+}
+
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+footer {
+    background-color: #545593;
+    color: white;
+    padding: 15px 2;
+     font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section{
+    flex-basis: 23%; /*faz com que as seções ocupem 23% da largura, com espaço para margens*/
+    margin-bottom: 20px;
+}
+
+.footer-section h4{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-section p, .footer-section ul{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+
+}
+
+.footer-section ul{
+    list-style-type: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+.footer-section ul li a:hover{
+    color: #a294ff;
+}
+
+.social-link a{
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-link a:hover{
+    color: #ffffff;
+}
+
+.footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #4444;
+    font-size: 14px;
+}
+
+.footer-bottom p{
+    text-align: left;
+}
